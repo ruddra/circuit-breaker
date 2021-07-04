@@ -92,8 +92,8 @@ class CircuitBreakerExpection(Exception):
         self.will_recover = will_recover
 
     def __str__(self):
-        return f"Circuit opened for {self.func.__name__} at {self.circuit_opened}"
-        "Will recover at {self.will_recover}"
+        return f"Circuit opened for {self.func.__name__} at {self.circuit_opened}" \
+        f"Will recover at {self.will_recover}"
 
 
 circuit_breaker = CircuitBreaker()
