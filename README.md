@@ -1,4 +1,4 @@
-# circuit_breaker
+# Circuit Breaker
 
 A naive circuit breaker implementation in Python.
 
