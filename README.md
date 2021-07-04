@@ -15,3 +15,13 @@ def some_function():
 ```
 
 Please see the `solution.py` file for more understanding on how this decorator can be used.
+
+## Test
+
+To see the decorator work, please run `python solution.py` and you will see logs like this:
+
+![screenshot](https://raw.githubusercontent.com/ruddra/circuit_breaker/master/circuitbreaker.jpg)
+
+## License
+
+MIT
