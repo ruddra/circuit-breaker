@@ -33,7 +33,7 @@ class CircuitBreaker(object):
     @property
     def _state(self):
         if self.opts['state'] == STATE_OPEN and datetime.now() > self._will_recover:
-            # if current time is bigger then recovery time then 
+            # if current time is bigger then recovery time then
             # we half open the circuit
             self.opts['state'] = STATE_HALF_OPEN
             self.opts['total_failed'] = 0
@@ -107,14 +107,15 @@ class CircuitBreakerExpection(Exception):
     """
     Raise custom error if Circuit is open
     """
+
     def __init__(self, func, state=None, total_failed=None, circuit_opened=None, will_recover=None):
         self.func = func
         self.circuit_opened = circuit_opened
         self.will_recover = will_recover
 
     def __str__(self):
-        return f"Circuit opened for {self.func.__name__} at {self.circuit_opened}" \
-        f"Will recover at {self.will_recover}"
+        return f"Circuit opened for {self.func.__name__} at {self.circuit_opened} \n" \
+            f"Will recover at {self.will_recover}"
 
 
 circuit_breaker = CircuitBreaker()
