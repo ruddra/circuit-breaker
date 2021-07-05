@@ -80,6 +80,7 @@ class CircuitBreaker(object):
         else:
             # otherwise we close the circuit
             state = STATE_CLOSED
+            total_failed = 0
 
         self.opts.update({
             'state': state,
